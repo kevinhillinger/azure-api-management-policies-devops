@@ -30,11 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NSubstitute, Version=3.1.0.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\NSubstitute.3.1.0\lib\net46\NSubstitute.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,16 +53,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="PolicyExpressionEvaluator.cs" />
+    <Compile Include="Extensions\BasicAuthCredentialsExtensions.cs" />
+    <Compile Include="Extensions\RequestHeaderExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variables\Api.cs" />
+    <Compile Include="Variables\BasicAuthCredentials.cs" />
     <Compile Include="Variables\IApi.cs" />
     <Compile Include="Variables\IContext.cs" />
     <Compile Include="Variables\IDeployment.cs" />
+    <Compile Include="Variables\IGroup.cs" />
     <Compile Include="Variables\ILastError.cs" />
     <Compile Include="Variables\IMessageBody.cs" />
     <Compile Include="Variables\IOperation.cs" />
     <Compile Include="Variables\IProduct.cs" />
     <Compile Include="Variables\IRequest.cs" />
+    <Compile Include="Variables\IResponse.cs" />
+    <Compile Include="Variables\ISubscription.cs" />
+    <Compile Include="Variables\ISubscriptionKeyParameterNames.cs" />
+    <Compile Include="Variables\IUrl.cs" />
+    <Compile Include="Variables\IUser.cs" />
+    <Compile Include="Variables\IUserIdentity.cs" />
+    <Compile Include="Variables\Jwt.cs" />
     <Compile Include="Variables\ProductState.cs" />
   </ItemGroup>
   <ItemGroup>
